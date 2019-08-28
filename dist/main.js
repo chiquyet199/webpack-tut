@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(1)\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("console.log(\"xxx\")\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
