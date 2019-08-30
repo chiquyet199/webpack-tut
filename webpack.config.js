@@ -33,6 +33,8 @@ const cssRuleConfig = {
 }
 /**
  * sass-loader compile .scss to normal css
+ *  by default the sass-loader prefers node-sass implement
+ *  read more options at: https://github.com/webpack-contrib/sass-loader
  */
 const sassRuleConfig = {
   test: /\.s[ac]ss$/i,
