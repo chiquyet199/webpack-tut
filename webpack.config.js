@@ -55,4 +55,9 @@ module.exports = {
   },
   devtool: 'inline-source-map',// make it easy to debug each individual file
   plugins: [htmlPlugin],
+  devServer: { // Prevent 404 page when reload page with router /users ....
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true
+  },
 }
