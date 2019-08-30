@@ -31,6 +31,13 @@ const cssRuleConfig = {
   test: /\.css$/,
   use: ["style-loader", "css-loader"]
 }
+/**
+ * sass-loader compile .scss to normal css
+ */
+const sassRuleConfig = {
+  test: /\.s[ac]ss$/i,
+  use: ["style-loader", "css-loader", "sass-loader"]
+}
 
 module.exports = {
   entry: {main: './src/index.js'},
@@ -41,7 +48,7 @@ module.exports = {
   module: {
     rules: [
       jsRuleConfig,
-      cssRuleConfig
+      sassRuleConfig
     ],
   },
   plugins: [htmlPlugin],
