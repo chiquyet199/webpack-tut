@@ -53,5 +53,6 @@ module.exports = {
       sassRuleConfig
     ],
   },
+  devtool: 'inline-source-map',// make it easy to debug each individual file
   plugins: [htmlPlugin],
 }
