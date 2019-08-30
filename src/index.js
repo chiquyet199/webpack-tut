@@ -1,5 +1,4 @@
-console.log("xxx")
-const arrowFunction = () => {
-  const name = 'QUYET'
-  console.log(`heelo ${name}`)
-}
+import ReactDOM from 'react-dom'
+import App from './App'
+
+ReactDOM.render(<App />, document.querySelector('#root'))
