@@ -13,6 +13,25 @@ const htmlPlugin = new HtmlWebpackPlugin({
   filename: './index.html',
 })
 
+const jsRuleConfig = {
+  test: /\.js$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'babel-loader',
+  },
+}
+
+/**
+ * css-loader: Help to make import css to js work
+ * style-loader: inject css to style tag on our html
+ * the load order from right to left
+ * those loaders is required in order to make css work
+ */
+const cssRuleConfig = {
+  test: /\.css$/,
+  use: ["style-loader", "css-loader"]
+}
+
 module.exports = {
   entry: {main: './src/index.js'},
   output: {
@@ -21,13 +40,8 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
+      jsRuleConfig,
+      cssRuleConfig
     ],
   },
   plugins: [htmlPlugin],
